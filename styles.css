@@ -1,20 +1,21 @@
 body {
     font-family: 'Playfair Display', serif;
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #A44E56; 
+    background-color: #A44E56;
     color: #ffffff;
     padding: 2rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    letter-spacing: 0.2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    line-height: 1rem
 }
 
 nav ul {
@@ -39,7 +40,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #8D3E48; 
+    background-color: #8D3E48;
     border-radius: 5px;
 }
 
@@ -49,12 +50,12 @@ nav ul li a:hover {
 }
 
 .conteudo img {
-    width: 100%;
-    max-width: 800px;
+    width: 110%;
+    max-width: 900px;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-    margin-top: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
 }
 
 footer {
@@ -71,28 +72,25 @@ footer {
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
 ul {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 ul li {
     background-color: #ffffff;
-    border: 1px solid #E5E5E5;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 0.2px solid #E5E5E5;
+    padding: 0.1rem;
+    border-radius: 03px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 ul li:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 ul li span {
@@ -100,7 +98,6 @@ ul li span {
     font-weight: bold;
     font-size: 1.2rem;
 }
-
 
 form {
     display: flex;
@@ -112,7 +109,7 @@ form {
     border-radius: 10px;
     max-width: 600px;
     margin: 4rem auto;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 form input, form textarea {
@@ -123,7 +120,7 @@ form input, form textarea {
     border-radius: 8px;
     font-size: 1rem;
     background-color: #ffffff;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); 
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 form button {
@@ -135,21 +132,53 @@ form button {
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 form button:hover {
     background-color: #8D3E48;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+@media ( max-width: 425px) {
+    nav ul li a {
+        font-size: 0.75rem;
+        margin: 0;
+    }
+}
 
-@media (max-width: 768px) {
-    ul {
-        grid-template-columns: 1fr;
+@media (max-width: 320px) {
+    header {
+        background-color: #A44E56;
+        color: #ffffff;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul li {
+        font-size: 1.75rem;
+        margin: 3px;
     }
 
     .conteudo {
-        padding: 2rem;
+        padding: 0.5rem;
+    }
+
+    form {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    form button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
     }
 }
